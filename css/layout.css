@@ -444,6 +444,17 @@ ul#nav li.current a { color: #F06000; }
 }
 
 
+/* Wooster thesis popup only: portrait cover, so give the text a wider column
+   and a slimmer image, and let the text show in full (no inner scrolling) */
+#modal-08 {
+	max-width: 1000px;
+	grid-template-columns: minmax(0, 1fr) minmax(400px, 560px);
+}
+#modal-08 .description-box {
+	max-height: none;
+	overflow: visible;
+}
+
 /* fadein/fadeout effect for modal popup
 /* ------------------------------------------------------------------ */
 
