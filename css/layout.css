@@ -98,6 +98,8 @@ header .social li {
 }
 header .social li a { color: #fff; }
 header .social li a:hover { color: #11ABB0; }
+/* Tableau icon: inline SVG (Font Awesome 4.7 has no Tableau glyph), sized and coloured like the font icons */
+.icon-tableau { width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em; }
 
 /* scrolldown link */
 header .scrolldown a {
@@ -393,17 +395,6 @@ ul#nav li.current a { color: #F06000; }
 	font: 15px/26px 'opensans-regular', sans-serif;
    color: #666;
    margin-bottom: 14px;
-}
-.popup-modal .description-box .categories {
-   font: 11px/21px 'opensans-light', sans-serif;
-   color: #A1A1A1;
-   text-transform: uppercase;
-   letter-spacing: 2px;
-   display: block;
-   text-align: left;
-}
-.popup-modal .description-box .categories i {
-   margin-right: 8px;
 }
 .popup-modal .link-box {
    grid-column: 2;
