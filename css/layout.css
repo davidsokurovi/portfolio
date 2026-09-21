@@ -296,18 +296,31 @@ ul#nav li.current a { color: #F06000; }
 	filter:alpha(opacity=100);
 }
 
-/* list layout: image preview on the left, title + description on the right */
+/* list layout: two projects per row; each card = image on top, title + subtitle + tags below */
 #portfolio-wrapper {
-   max-width: 860px;
+   max-width: 1000px;
    margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 28px;
 }
+/* the clearfix pseudo-elements would otherwise become empty grid cells */
+#portfolio-wrapper:before,
+#portfolio-wrapper:after { display: none; }
 #portfolio-wrapper .columns.portfolio-item {
+   display: -webkit-flex;
+   display: flex;
    width: 100% !important;
    float: none;
    padding: 0;
-   margin-bottom: 24px;
+   margin: 0;
 }
 .portfolio-item .item-wrap {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex: 1;
+   flex: 1;
+   min-width: 0;
    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 .portfolio-item .item-wrap:hover {
@@ -318,12 +331,16 @@ ul#nav li.current a { color: #F06000; }
 .portfolio-item .item-wrap a {
    display: -webkit-flex;
    display: flex;
-   -webkit-align-items: center;
-   align-items: center;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-flex: 1;
+   flex: 1;
+   min-width: 0;
 }
 .portfolio-item .item-wrap img {
-   width: 360px;
-   height: 225px;
+   width: 100%;
+   height: auto;
+   aspect-ratio: 16 / 10;
    object-fit: cover;
    object-position: top left;
    -webkit-flex-shrink: 0;
@@ -345,7 +362,7 @@ ul#nav li.current a { color: #F06000; }
    background: none;
 }
 .portfolio-item .item-wrap .link-icon { display: none; }
-.portfolio-item .portfolio-item-meta { padding: 20px 32px; }
+.portfolio-item .portfolio-item-meta { padding: 20px 24px 14px; }
 .portfolio-item .portfolio-item-meta h5 {
    font: 20px/28px 'opensans-bold', sans-serif;
    color: #2b2f2f;
@@ -768,30 +785,6 @@ footer {
 
 footer a, footer a:visited { color: #525252; }
 footer a:hover, footer a:focus { color: #fff; }
-
-/* copyright */
-footer .copyright {
-    margin: 0;
-    padding: 0;
- }
-footer .copyright li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    line-height: 24px;
-}
-.ie footer .copyright li {
-   display: inline;
-}
-footer .copyright li:before {
-    content: "\2022";
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #095153;
-}
-footer .copyright  li:first-child:before {
-    display: none;
-}
 
 /* social links */
 footer .social-links {
