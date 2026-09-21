@@ -255,6 +255,11 @@
    /* Portfolio Section
    /* ----------------------------------------------------------------- */
    #portfolio-wrapper .columns { margin-bottom: 40px; }
+   #portfolio-wrapper .columns.portfolio-item { margin-bottom: 20px; }
+   .portfolio-item .item-wrap img { width: 120px; height: 120px; }
+   .portfolio-item .portfolio-item-meta { padding: 12px 18px; }
+   .portfolio-item .portfolio-item-meta h5 { font-size: 16px; line-height: 22px; }
+   .portfolio-item .portfolio-item-meta p { font-size: 13px; line-height: 20px; }
    .popup-modal {	max-width: 85%; }
 
 
