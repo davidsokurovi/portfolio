@@ -89,6 +89,13 @@
    }
    #contact .section-head p.lead { font: 17px/33px opensans-light, sans-serif; }
 
+   /* Popup modal: stack image above text on narrow screens
+   ------------------------------------------------------------------- */
+   .popup-modal { display: block; }
+   .popup-modal > img { height: auto; max-height: 50vh; }
+   .popup-modal .description-box { max-height: none; overflow: visible; padding: 20px 24px 12px; }
+   .popup-modal .link-box { padding: 16px 24px; }
+
 
 }
 
