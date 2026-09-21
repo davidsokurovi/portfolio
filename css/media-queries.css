@@ -117,7 +117,7 @@
       background: transparent !important;
       letter-spacing: 1.5px;  
       width: auto;
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 0;
    }

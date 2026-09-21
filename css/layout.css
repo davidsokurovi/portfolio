@@ -122,7 +122,8 @@ header .banner-text .hero-tagline {
 header .banner-text .hero-summary {
    font: 18px/30px 'opensans-regular', sans-serif;
    color: #e3e8e8;
-   max-width: 760px;
+   max-width: 900px;
+   text-wrap: balance;
    margin: 0 auto;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
 }
@@ -239,7 +240,7 @@ header .scrolldown a:hover { color: #11ABB0; }
    letter-spacing: 2.5px;
    margin: 0 auto;
    z-index: 100;
-   position: fixed;
+   position: absolute;
    left: 0;
    top: 0;
 }
