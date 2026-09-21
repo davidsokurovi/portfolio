@@ -357,6 +357,19 @@ ul#nav li.current a { color: #F06000; }
 }
 .portfolio-item:hover .portfolio-item-meta h5 { color: #11abb0; }
 
+/* skill / topic tags on the project list */
+.portfolio-item .portfolio-item-meta .tags { display: block; margin-top: 12px; line-height: 1; }
+.portfolio-item .tag {
+   display: inline-block;
+   margin: 0 6px 6px 0;
+   padding: 4px 10px;
+   border-radius: 999px;
+   font: 12px/16px 'opensans-bold', sans-serif;
+   color: #5a6666;
+   background: #eef1f1;
+}
+.portfolio-item .tag-tool { color: #096a6e; background: #e0f4f4; }
+
 /* popup modal: wide two-column card, image on the left, text on the right */
 .popup-modal {
 	width: 92vw;
@@ -383,7 +396,7 @@ ul#nav li.current a { color: #F06000; }
 	grid-row: 1;
 	padding: 28px 36px 18px 36px;
 	overflow-y: auto;
-	max-height: calc(84vh - 62px);
+	max-height: calc(84vh - 80px);
 }
 .popup-modal .description-box h4 {
    font: 20px/28px 'opensans-bold', sans-serif;
@@ -411,6 +424,20 @@ ul#nav li.current a { color: #F06000; }
    cursor: pointer;
 }
 .popup-modal a:hover {	color: #00CCCC; }
+/* popup call-to-action button (says where it goes, opens in a new tab) */
+.popup-modal .link-box a.popup-link {
+   display: inline-block;
+   padding: 12px 20px;
+   background: #0b7f84;
+   border-radius: 3px;
+   font: 14px/20px 'opensans-bold', sans-serif;
+   text-transform: none;
+   letter-spacing: 0.3px;
+   -webkit-transition: background .2s ease-in-out;
+   transition: background .2s ease-in-out;
+}
+.popup-modal .link-box a.popup-link:hover { background: #096a6e; color: #fff; }
+.popup-modal .link-box a.popup-link .fa { margin-left: 8px; font-size: 13px; }
 /* close (X) button, top right corner of the popup */
 .popup-modal .popup-close {
 	position: absolute;

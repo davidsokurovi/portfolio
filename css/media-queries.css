@@ -29,6 +29,7 @@
    .popup-modal > img { height: auto; max-height: 50vh; }
    .popup-modal .description-box { max-height: none; overflow: visible; padding: 20px 24px 12px; }
    .popup-modal .link-box { padding: 16px 24px; }
+   .popup-modal .link-box a.popup-link { display: block; text-align: center; }
 
 }
 
