@@ -40,6 +40,7 @@
     /* header styles
    ------------------------------------------------------------------ */
    header .banner { padding-bottom: 12px; }
+   header .hero-panels { grid-template-columns: 1fr; }
    header .banner-text h1 {
       font: 78px/1.1em 'opensans-bold', sans-serif;
       letter-spacing: -1px;      
@@ -373,6 +374,9 @@
    /* header styles
    -------------------------------------------------------------------- */
    header .banner { padding-top: 24px; }
+   header .hero-panel { padding: 20px 20px 8px 20px; }
+   header .banner-text .hero-tagline { font-size: 14px; letter-spacing: 0.3px; }
+   header .banner-text .hero-summary { font-size: 16px; line-height: 27px; }
    header .banner-text h1 {
       font: 40px/1.1em 'opensans-bold', sans-serif;      
       margin: 0 auto 24px auto;

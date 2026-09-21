@@ -30,8 +30,17 @@ body { background: #0f0f0f; }
 
 header {
    position: relative;
-   height: 800px;
+   height: auto;
    min-height: 500px;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   padding: 110px 0 100px 0;
    width: 100%;
    background: #161415 url(../images/header-background.jpg) no-repeat top center;
    background-size: cover !important;
@@ -42,19 +51,14 @@ header {
 
 
 
-/* vertically center banner section */
-header:before {
-   content: '';
-   display: inline-block;
-   vertical-align: middle;
-   height: 100%;
-}
+/* banner is centred by the flex layout on header (grows taller than the screen if the content needs it) */
+header:before { display: none; }
 header .banner {
-   display: inline-block;
-   vertical-align: middle;
+   display: block;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;
+   max-width: 1000px;
+   padding-bottom: 0;
    text-align: center;
 }
 
@@ -98,6 +102,95 @@ header .social li {
 }
 header .social li a { color: #fff; }
 header .social li a:hover { color: #11ABB0; }
+/* hero intro: name, tagline, summary */
+header .banner-text .hero-eyebrow {
+   font: 13px/20px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   color: #11ABB0;
+   margin: 0 0 14px 0;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+}
+header .banner-text .hero-tagline {
+   font: 18px/28px 'opensans-bold', sans-serif;
+   letter-spacing: 1px;
+   color: #fff;
+   margin: 0 0 14px 0;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+}
+header .banner-text .hero-summary {
+   font: 18px/30px 'opensans-regular', sans-serif;
+   color: #e3e8e8;
+   max-width: 760px;
+   margin: 0 auto;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+}
+
+/* hero panels: highlights + skills | education */
+header .hero-panels {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 24px;
+   margin: 32px auto 0 auto;
+   text-align: left;
+}
+header .hero-panel {
+   background: rgba(12, 12, 14, 0.72);
+   border: 1px solid rgba(255, 255, 255, 0.12);
+   border-radius: 6px;
+   padding: 26px 30px 12px 30px;
+   color: #d5dada;
+}
+header .hero-panel h2 {
+   font: 13px/20px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   color: #11ABB0;
+   margin: 0 0 14px 0;
+}
+header .hero-panel h2:not(:first-child) { margin-top: 22px; }
+header .hero-list { margin: 0 0 6px 0; padding: 0; list-style: none; }
+header .hero-list li {
+   position: relative;
+   padding-left: 18px;
+   margin: 0 0 12px 0;
+   font: 15px/24px 'opensans-regular', sans-serif;
+   color: #d5dada;
+}
+header .hero-list li:before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 9px;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   background: #11ABB0;
+}
+header .hero-panel strong { color: #fff; line-height: inherit; }
+header .hero-chips { margin: 0 0 8px 0; line-height: 1; }
+header .hero-chip {
+   display: inline-block;
+   margin: 0 6px 8px 0;
+   padding: 5px 11px;
+   border-radius: 999px;
+   font: 13px/18px 'opensans-bold', sans-serif;
+   color: #8fe6e9;
+   background: rgba(17, 171, 176, 0.16);
+   border: 1px solid rgba(17, 171, 176, 0.45);
+}
+header .hero-note { font: 15px/24px 'opensans-regular', sans-serif; color: #d5dada; margin: 0 0 14px 0; }
+header .hero-edu { margin: 0 0 18px 0; }
+header .banner-text .hero-edu h3 {
+   font: 16px/24px 'opensans-bold', sans-serif;
+   color: #fff;
+   width: auto;
+   margin: 0 0 2px 0;
+   text-shadow: none;
+}
+header .hero-school { font: 14px/22px 'opensans-regular', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
+header .hero-courses { font: 14px/22px 'opensans-regular', sans-serif; color: #c3cbcb; margin: 0 0 8px 0; }
+
 /* Tableau icon: inline SVG (Font Awesome 4.7 has no Tableau glyph), sized and coloured like the font icons */
 .icon-tableau { width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em; }
 

@@ -11,7 +11,7 @@
 ------------------------------------------------------ */
 
     setTimeout(function() {
-	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
+	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '72px' });
 	 }, 100);
 
 
@@ -65,10 +65,10 @@
 /* equal to the browser height.
 ------------------------------------------------------ */
 
-   $('header').css({ 'height': $(window).height() });
+   $('header').css({ 'min-height': $(window).height() });
    $(window).on('resize', function() {
 
-        $('header').css({ 'height': $(window).height() });
+        $('header').css({ 'min-height': $(window).height() });
         $('body').css({ 'width': $(window).width() })
    });
 
