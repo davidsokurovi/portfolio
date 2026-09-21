@@ -723,15 +723,15 @@ call-to-action .button {
 
 .contactTemplate {
    background: #191919;
-   padding-top: 96px;
-   padding-bottom: 102px;
+   padding-top: 64px;
+   padding-bottom: 48px;
    color: #636363;
 }
 
 .resumeTemplate{
    padding-bottom: 10px;
 }
-.contactTemplate .section-head { margin-bottom: 42px; }
+.contactTemplate .section-head { margin-bottom: 0; }
 
 .contactTemplate a, .contactTemplate a:visited  { color: #11ABB0; }
 .contactTemplate a:hover, .contactTemplate a:focus { color: #fff; }
@@ -760,10 +760,13 @@ call-to-action .button {
 }
 
 .contactTemplate h4 {
-   font: 16px/24px 'opensans-bold', sans-serif;
+   font: 19px/28px 'opensans-bold', sans-serif;
    color: #EBEEEE;
-   margin-bottom: 6px;
+   margin-bottom: 8px;
 }
+.contactTemplate .ten.columns p { font-size: 17px; line-height: 28px; margin-bottom: 20px; }
+.contactTemplate .ten.columns p:empty { display: none; }
+.contactTemplate .ten.columns p.address { margin-bottom: 0; }
 .contactTemplate p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
    padding-right: 3%;

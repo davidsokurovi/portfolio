@@ -94,7 +94,7 @@
 
    /* Contact Section
    ------------------------------------------------------------------- */
-   #contact .section-head { margin-bottom: 30px; }
+   #contact .section-head { margin-bottom: 0; }
    #contact .header-col h1:before {
       font-size: 66px;
       line-height: 66px;
@@ -300,8 +300,8 @@
 
    /* contact Section
    ----------------------------------------------------------------------- */
-   #contact { padding-bottom: 66px; }
-   #contact .section-head { margin-bottom: 12px; }
+   #contact { padding-bottom: 40px; }
+   #contact .section-head { margin-bottom: 0; }
    #contact .section-head h1 {
       font: 16px/24px 'opensans-bold', sans-serif;            
       text-align: center;   
