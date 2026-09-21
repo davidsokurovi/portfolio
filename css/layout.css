@@ -43,7 +43,7 @@ header {
    padding: 64px 0 90px 0;
    width: 100%;
    /* light dark tint over the image so the text reads more easily */
-   background: linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)), #161415 url(../images/header-background.jpg) no-repeat top center;
+   background: linear-gradient(rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.36)), #161415 url(../images/header-background.jpg) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
