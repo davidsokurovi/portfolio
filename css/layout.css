@@ -320,8 +320,8 @@ ul#nav li.current a { color: #F06000; }
    align-items: center;
 }
 .portfolio-item .item-wrap img {
-   width: 260px;
-   height: 170px;
+   width: 360px;
+   height: 225px;
    object-fit: cover;
    object-position: top left;
    -webkit-flex-shrink: 0;
