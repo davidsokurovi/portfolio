@@ -168,7 +168,7 @@ header .hero-list li:before {
    background: #11ABB0;
 }
 header .hero-panel strong { color: #fff; line-height: inherit; }
-header .hero-chips { margin: 0 0 8px 0; line-height: 1; }
+header .hero-chips { margin: 0 0 14px 0; line-height: 1; }
 header .hero-chip {
    display: inline-block;
    margin: 0 6px 8px 0;
@@ -179,7 +179,6 @@ header .hero-chip {
    background: rgba(17, 171, 176, 0.16);
    border: 1px solid rgba(17, 171, 176, 0.45);
 }
-header .hero-note { font: 15px/24px 'opensans-regular', sans-serif; color: #d5dada; margin: 0 0 14px 0; }
 header .hero-edu { margin: 0 0 18px 0; }
 header .banner-text .hero-edu h3 {
    font: 16px/24px 'opensans-bold', sans-serif;
