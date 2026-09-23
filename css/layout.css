@@ -189,19 +189,6 @@ header .banner-text .hero-edu h3 {
    margin: 0 0 2px 0;
    text-shadow: none;
 }
-header .hero-honor {
-   display: inline-block;
-   margin-left: 8px;
-   padding: 3px 10px;
-   border-radius: 3px;
-   font: 11px/16px 'opensans-bold', sans-serif;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   color: #8fe6e9;
-   background: rgba(17, 171, 176, 0.14);
-   border: 1px solid rgba(17, 171, 176, 0.5);
-   vertical-align: middle;
-}
 header .hero-school { font: 14px/22px 'opensans-regular', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
 header .hero-courses {
    font: 14px/22px 'opensans-regular', sans-serif;
@@ -214,19 +201,18 @@ header .hero-courses {
 /* Tableau icon: inline SVG (Font Awesome 4.7 has no Tableau glyph), sized and coloured like the font icons */
 .icon-tableau { width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em; }
 
-/* scrolldown link */
+/* scrolldown link: normal document flow, right after the cards, so it can never
+   land on top of them -- previously pinned 30px from the bottom of the whole
+   header box, which worked only while the header always filled the screen */
+header .scrolldown { margin: 24px 0 0 0; }
 header .scrolldown a {
-   position: absolute;
-   bottom: 30px;
-   left: 50%;
-   margin-left: -29px;
+   position: relative;
+   display: inline-block;
    color: #fff;
-   display: block;
    height: 42px;
    width: 42px;
    font-size: 42px;
    line-height: 42px;
-   color: #fff;
    border-radius: 100%;
 
    -webkit-transition: all .3s ease-in-out;
