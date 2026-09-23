@@ -189,6 +189,19 @@ header .banner-text .hero-edu h3 {
    margin: 0 0 2px 0;
    text-shadow: none;
 }
+header .hero-honor {
+   display: inline-block;
+   margin-left: 8px;
+   padding: 3px 10px;
+   border-radius: 3px;
+   font: 11px/16px 'opensans-bold', sans-serif;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #8fe6e9;
+   background: rgba(17, 171, 176, 0.14);
+   border: 1px solid rgba(17, 171, 176, 0.5);
+   vertical-align: middle;
+}
 header .hero-school { font: 14px/22px 'opensans-regular', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
 header .hero-courses {
    font: 14px/22px 'opensans-regular', sans-serif;
