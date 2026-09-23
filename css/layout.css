@@ -40,7 +40,7 @@ header {
    justify-content: flex-start;
    -webkit-align-items: center;
    align-items: center;
-   padding: 64px 0 90px 0;
+   padding: 64px 0 56px 0;
    width: 100%;
    /* light dark tint over the image so the text reads more easily */
    background: linear-gradient(rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.36)), #161415 url(../images/header-background.jpg) no-repeat top center;
@@ -297,7 +297,7 @@ ul#nav li.current a { color: #F06000; }
 
 #portfolio {
    background: #ebeeee;
-   padding-top: 90px;
+   padding-top: 56px;
    padding-bottom: 60px;
 }
 #portfolio h1 {
@@ -305,7 +305,7 @@ ul#nav li.current a { color: #F06000; }
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
-   margin-bottom: 48px;
+   margin-bottom: 36px;
    color: #95A3A3;
 }
 

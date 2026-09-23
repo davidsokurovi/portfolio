@@ -65,10 +65,7 @@
 /* equal to the browser height.
 ------------------------------------------------------ */
 
-   $('header').css({ 'min-height': $(window).height() });
    $(window).on('resize', function() {
-
-        $('header').css({ 'min-height': $(window).height() });
         $('body').css({ 'width': $(window).width() })
    });
 
