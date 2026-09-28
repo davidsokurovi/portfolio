@@ -236,8 +236,8 @@
    }
    header .social li { margin: 0 10px; }
 
-    /* scrolldown link */
-   header .scrolldown { display: none; }
+    /* scrolldown / hero-cta: kept visible -- it's now a real "View My Projects"
+    shortcut, not just a decorative scroll cue */
 
 
    /* About Section

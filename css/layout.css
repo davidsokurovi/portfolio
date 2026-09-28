@@ -129,18 +129,19 @@ header .banner-text .hero-summary {
 }
 
 /* hero panels: highlights + skills | education */
+header .hero-more { margin: 22px 0 0 0; }
 header .hero-panels {
    display: grid;
    grid-template-columns: repeat(2, minmax(0, 1fr));
    gap: 24px;
-   margin: 18px auto 0 auto;
+   margin: 20px auto 0 auto;
    text-align: left;
 }
 header .hero-panel {
    background: rgba(12, 12, 14, 0.72);
    border: 1px solid rgba(255, 255, 255, 0.12);
    border-radius: 6px;
-   padding: 26px 30px 12px 30px;
+   padding: 22px 28px 10px 28px;
    color: #d5dada;
 }
 header .hero-panel h2 {
@@ -150,13 +151,13 @@ header .hero-panel h2 {
    color: #11ABB0;
    margin: 0 0 14px 0;
 }
-header .hero-panel h2:not(:first-child) { margin-top: 22px; }
-header .hero-list { margin: 0 0 6px 0; padding: 0; list-style: none; }
+header .hero-panel h2:not(:first-child) { margin-top: 20px; }
+header .hero-list { margin: 0 0 4px 0; padding: 0; list-style: none; }
 header .hero-list li {
    position: relative;
    padding-left: 18px;
-   margin: 0 0 12px 0;
-   font: 15px/24px 'opensans-regular', sans-serif;
+   margin: 0 0 9px 0;
+   font: 15px/22px 'opensans-regular', sans-serif;
    color: #d5dada;
 }
 header .hero-list li:before {
@@ -170,11 +171,11 @@ header .hero-list li:before {
    background: #11ABB0;
 }
 header .hero-panel strong { color: #fff; line-height: inherit; }
-header .hero-chips { margin: 0 0 14px 0; line-height: 1; }
+header .hero-chips { margin: 0 0 10px 0; line-height: 1; }
 header .hero-chip {
    display: inline-block;
-   margin: 0 6px 8px 0;
-   padding: 5px 11px;
+   margin: 0 6px 6px 0;
+   padding: 4px 10px;
    border-radius: 999px;
    font: 13px/18px 'opensans-bold', sans-serif;
    color: #8fe6e9;
@@ -190,35 +191,117 @@ header .banner-text .hero-edu h3 {
    text-shadow: none;
 }
 header .hero-school { font: 14px/22px 'opensans-regular', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
-header .hero-courses {
-   font: 14px/22px 'opensans-regular', sans-serif;
-   color: #c3cbcb;
-   margin: 0 0 8px 14px;
+header .hero-edu details.hero-coursework {
+   margin: 6px 0 8px 14px;
    padding-left: 14px;
    border-left: 2px solid rgba(17, 171, 176, 0.45);
 }
+header .hero-edu summary {
+   cursor: pointer;
+   list-style: none;
+   display: inline-flex;
+   align-items: center;
+   gap: 6px;
+   font: 12px/20px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   color: #8fe6e9;
+   -webkit-user-select: none;
+   user-select: none;
+}
+header .hero-edu summary::-webkit-details-marker { display: none; }
+header .hero-edu summary::marker { content: ""; }
+header .hero-edu summary:hover { color: #fff; }
+header .hero-edu summary .icon-down-open {
+   font-size: 10px;
+   transition: transform .2s ease-in-out;
+}
+header .hero-edu details[open] summary .icon-down-open { transform: rotate(-180deg); }
+header .hero-courses {
+   font: 14px/22px 'opensans-regular', sans-serif;
+   color: #c3cbcb;
+   margin: 6px 0 0 0;
+}
+
+header .hero-toggle {
+   cursor: pointer;
+   list-style: none;
+   display: inline-flex;
+   align-items: center;
+   gap: 9px;
+   padding: 11px 22px;
+   border-radius: 999px;
+   background: transparent;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   color: #d5dada;
+   font: 12px/18px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1.3px;
+   -webkit-user-select: none;
+   user-select: none;
+
+   -webkit-transition: all .2s ease-in-out;
+   -moz-transition: all .2s ease-in-out;
+   -o-transition: all .2s ease-in-out;
+   transition: all .2s ease-in-out;
+}
+header .hero-toggle::-webkit-details-marker { display: none; }
+header .hero-toggle::marker { content: ""; }
+header .hero-toggle:hover {
+   border-color: #11ABB0;
+   color: #fff;
+}
+header .hero-toggle .icon-down-open {
+   font-size: 12px;
+   transition: transform .2s ease-in-out;
+}
+header .hero-more[open] .hero-toggle .icon-down-open { transform: rotate(-180deg); }
 
 /* Tableau icon: inline SVG (Font Awesome 4.7 has no Tableau glyph), sized and coloured like the font icons */
 .icon-tableau { width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em; }
 
-/* scrolldown link: normal document flow, right after the cards, so it can never
-   land on top of them -- previously pinned 30px from the bottom of the whole
-   header box, which worked only while the header always filled the screen */
-header .scrolldown { margin: 24px 0 0 0; }
-header .scrolldown a {
-   position: relative;
-   display: inline-block;
+/* scrolldown: a real "View My Projects" button instead of a bare icon, in normal
+   document flow right after the cards (see the earlier fix for why it can no
+   longer be pinned to the header's bottom edge) -- it's an actual shortcut to
+   the projects now, not just a decorative scroll cue */
+header .scrolldown { margin: 26px 0 0 0; }
+header .hero-cta {
+   display: inline-flex;
+   align-items: center;
+   gap: 9px;
+   padding: 13px 24px;
+   border-radius: 999px;
+   background: rgba(17, 171, 176, 0.14);
+   border: 1px solid rgba(17, 171, 176, 0.6);
    color: #fff;
-   height: 42px;
-   width: 42px;
-   font-size: 42px;
-   line-height: 42px;
-   border-radius: 100%;
+   font: 13px/18px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
 
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
-   transition: all .3s ease-in-out;
+   -webkit-transition: all .25s ease-in-out;
+   -moz-transition: all .25s ease-in-out;
+   -o-transition: all .25s ease-in-out;
+   transition: all .25s ease-in-out;
+}
+header .hero-cta i {
+   font-size: 15px;
+   -webkit-animation: hero-cta-bob 1.8s ease-in-out infinite;
+   animation: hero-cta-bob 1.8s ease-in-out infinite;
+}
+header .hero-cta:hover {
+   background: #11ABB0;
+   border-color: #11ABB0;
+   color: #fff;
+   -webkit-transform: translateY(2px);
+   transform: translateY(2px);
+}
+@-webkit-keyframes hero-cta-bob {
+   0%, 100% { -webkit-transform: translateY(0); }
+   50% { -webkit-transform: translateY(3px); }
+}
+@keyframes hero-cta-bob {
+   0%, 100% { transform: translateY(0); }
+   50% { transform: translateY(3px); }
 }
 header .scrolldown a:hover { color: #11ABB0; }
 
