@@ -60,24 +60,3 @@ CSS/JS for up to ~10 minutes afterward.
 To force a browser to pick up a CSS/JS change immediately, bump the version
 query string on its `<link>`/`<script>` tag in `index.html` (e.g.
 `css/layout.css?v=29` → `?v=30`) — that's why those numbers keep climbing.
-
-## Updating content
-
-**Add or replace a project image:** drop the full-size screenshot in
-`images/portfolio/modals/`, point that project's popup `<img>` at it in
-`index.html`, then regenerate its small list thumbnail:
-```
-sips -s format jpeg -s formatOptions 82 -Z 640 images/portfolio/modals/<name>.<ext> \
-  --out images/portfolio/thumbs/<name>.jpg
-```
-The list and the popup use two separate image files, so replacing one alone
-won't update the other.
-
-**Add a new project:** copy an existing `.portfolio-item` block and its matching
-`#modal-0N` popup in `index.html`, add its images as above, and give it its own
-tool/skill `<span class="tag">` chips (teal `tag-tool` for tools, grey `tag`
-for skills/techniques).
-
-**Edit the bio, education, or skills:** all in the `<header id="home">` section
-near the top of `index.html` — the `hero-*` classes in `css/layout.css` control
-its styling.
