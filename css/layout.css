@@ -233,11 +233,7 @@ header .hero-highlight-group h4 {
    color: #fff;
    margin: 0 0 6px 0;
 }
-header .hero-highlight-role {
-   font: 12px/18px 'opensans-regular', sans-serif;
-   color: #8fe6e9;
-}
-/* the one highlight without a job title (thesis) -- set apart with a divider */
+/* the one highlight without a company heading (thesis) -- set apart with a divider */
 header .hero-highlights-extra {
    margin-top: 4px;
    padding-top: 12px;
