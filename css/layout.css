@@ -225,6 +225,24 @@ header .hero-highlights li:before {
    border-radius: 50%;
    background: #11ABB0;
 }
+/* one block per role: company/title heading, then its own bullets */
+header .hero-highlight-group { margin: 0 0 16px 0; }
+header .hero-highlight-group:last-of-type { margin-bottom: 0; }
+header .hero-highlight-group h4 {
+   font: 14px/20px 'opensans-bold', sans-serif;
+   color: #fff;
+   margin: 0 0 6px 0;
+}
+header .hero-highlight-role {
+   font: 12px/18px 'opensans-regular', sans-serif;
+   color: #8fe6e9;
+}
+/* the one highlight without a job title (thesis) -- set apart with a divider */
+header .hero-highlights-extra {
+   margin-top: 4px;
+   padding-top: 12px;
+   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 /* Tableau icon: inline SVG (Font Awesome 4.7 has no Tableau glyph), sized and coloured like the font icons */
 .icon-tableau { width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em; }
