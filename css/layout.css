@@ -171,7 +171,7 @@ header .banner-text .hero-edu h3 {
    margin: 0 0 2px 0;
    text-shadow: none;
 }
-header .hero-school { font: 14px/22px 'opensans-semibold', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
+header .hero-school { font: 15px/23px 'opensans-semibold', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
 /* small collapsible detail block: used for each degree's coursework, and for
    the Highlights toggle inside Core Skills -- same quiet, indented treatment
    wherever it appears in a hero panel */
