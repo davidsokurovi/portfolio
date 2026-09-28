@@ -128,13 +128,13 @@ header .banner-text .hero-summary {
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
 }
 
-/* hero panels: highlights + skills | education */
-header .hero-more { margin: 22px 0 0 0; }
+/* hero panels: skills | education, always fully visible -- only the
+   coursework detail inside Education collapses, never the panels themselves */
 header .hero-panels {
    display: grid;
    grid-template-columns: repeat(2, minmax(0, 1fr));
    gap: 24px;
-   margin: 20px auto 0 auto;
+   margin: 22px auto 0 auto;
    text-align: left;
 }
 header .hero-panel {
@@ -150,25 +150,6 @@ header .hero-panel h2 {
    letter-spacing: 3px;
    color: #11ABB0;
    margin: 0 0 14px 0;
-}
-header .hero-panel h2:not(:first-child) { margin-top: 20px; }
-header .hero-list { margin: 0 0 4px 0; padding: 0; list-style: none; }
-header .hero-list li {
-   position: relative;
-   padding-left: 18px;
-   margin: 0 0 9px 0;
-   font: 15px/22px 'opensans-regular', sans-serif;
-   color: #d5dada;
-}
-header .hero-list li:before {
-   content: "";
-   position: absolute;
-   left: 0;
-   top: 9px;
-   width: 6px;
-   height: 6px;
-   border-radius: 50%;
-   background: #11ABB0;
 }
 header .hero-panel strong { color: #fff; line-height: inherit; }
 header .hero-chips { margin: 0 0 10px 0; line-height: 1; }
@@ -222,40 +203,6 @@ header .hero-courses {
    color: #c3cbcb;
    margin: 6px 0 0 0;
 }
-
-header .hero-toggle {
-   cursor: pointer;
-   list-style: none;
-   display: inline-flex;
-   align-items: center;
-   gap: 9px;
-   padding: 11px 22px;
-   border-radius: 999px;
-   background: transparent;
-   border: 1px solid rgba(255, 255, 255, 0.3);
-   color: #d5dada;
-   font: 12px/18px 'opensans-bold', sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 1.3px;
-   -webkit-user-select: none;
-   user-select: none;
-
-   -webkit-transition: all .2s ease-in-out;
-   -moz-transition: all .2s ease-in-out;
-   -o-transition: all .2s ease-in-out;
-   transition: all .2s ease-in-out;
-}
-header .hero-toggle::-webkit-details-marker { display: none; }
-header .hero-toggle::marker { content: ""; }
-header .hero-toggle:hover {
-   border-color: #11ABB0;
-   color: #fff;
-}
-header .hero-toggle .icon-down-open {
-   font-size: 12px;
-   transition: transform .2s ease-in-out;
-}
-header .hero-more[open] .hero-toggle .icon-down-open { transform: rotate(-180deg); }
 
 /* Tableau icon: inline SVG (Font Awesome 4.7 has no Tableau glyph), sized and coloured like the font icons */
 .icon-tableau { width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em; }
