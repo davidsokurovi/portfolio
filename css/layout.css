@@ -171,13 +171,16 @@ header .banner-text .hero-edu h3 {
    margin: 0 0 2px 0;
    text-shadow: none;
 }
-header .hero-school { font: 14px/22px 'opensans-regular', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
-header .hero-edu details.hero-coursework {
+header .hero-school { font: 14px/22px 'opensans-semibold', sans-serif; color: #8fe6e9; margin: 0 0 8px 0; }
+/* small collapsible detail block: used for each degree's coursework, and for
+   the Highlights toggle inside Core Skills -- same quiet, indented treatment
+   wherever it appears in a hero panel */
+header .hero-panel details.hero-coursework {
    margin: 6px 0 8px 14px;
    padding-left: 14px;
    border-left: 2px solid rgba(17, 171, 176, 0.45);
 }
-header .hero-edu summary {
+header .hero-panel summary {
    cursor: pointer;
    list-style: none;
    display: inline-flex;
@@ -190,18 +193,37 @@ header .hero-edu summary {
    -webkit-user-select: none;
    user-select: none;
 }
-header .hero-edu summary::-webkit-details-marker { display: none; }
-header .hero-edu summary::marker { content: ""; }
-header .hero-edu summary:hover { color: #fff; }
-header .hero-edu summary .icon-down-open {
+header .hero-panel summary::-webkit-details-marker { display: none; }
+header .hero-panel summary::marker { content: ""; }
+header .hero-panel summary:hover { color: #fff; }
+header .hero-panel summary .icon-down-open {
    font-size: 10px;
    transition: transform .2s ease-in-out;
 }
-header .hero-edu details[open] summary .icon-down-open { transform: rotate(-180deg); }
+header .hero-panel details[open] > summary .icon-down-open { transform: rotate(-180deg); }
 header .hero-courses {
    font: 14px/22px 'opensans-regular', sans-serif;
    color: #c3cbcb;
    margin: 6px 0 0 0;
+}
+header .hero-highlights { margin: 6px 0 0 0; padding: 0; list-style: none; }
+header .hero-highlights li {
+   position: relative;
+   padding-left: 16px;
+   margin: 0 0 8px 0;
+   font: 14px/22px 'opensans-regular', sans-serif;
+   color: #c3cbcb;
+}
+header .hero-highlights li:last-child { margin-bottom: 0; }
+header .hero-highlights li:before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 8px;
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   background: #11ABB0;
 }
 
 /* Tableau icon: inline SVG (Font Awesome 4.7 has no Tableau glyph), sized and coloured like the font icons */
