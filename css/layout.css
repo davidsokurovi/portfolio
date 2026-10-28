@@ -201,11 +201,6 @@ header .hero-panel summary .icon-down-open {
    transition: transform .2s ease-in-out;
 }
 header .hero-panel details[open] > summary .icon-down-open { transform: rotate(-180deg); }
-header .hero-courses {
-   font: 14px/22px 'opensans-regular', sans-serif;
-   color: #c3cbcb;
-   margin: 6px 0 0 0;
-}
 header .hero-highlights { margin: 6px 0 0 0; padding: 0; list-style: none; }
 header .hero-highlights li {
    position: relative;
